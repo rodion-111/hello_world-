@@ -1,3 +1,5 @@
 function love.draw()
-    love.graphics.print("hello world!", 300,400)
+    if love.keyboard.isDown("space") then
+        love.graphics.print("hello world!", 300,400)
+    end
 end
