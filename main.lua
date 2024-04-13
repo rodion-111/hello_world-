@@ -5,9 +5,11 @@ function love.load()
     player.speed = 5
     player.sprint = 10
     player.startspeed = player.speed
+    music = love.audio.newSource("sounds/music.mp3","stream")
+    music:play()
+    music:setLooping(true)
 end
 function love.update(dt)
-
     if love.keyboard.isDown("w") then --movement up
         player.y = player.y - player.speed
     end
