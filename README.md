@@ -6,7 +6,7 @@ hello world - space;
 blip - f;
 
 about game
-This is game for movement circle and function write "Hello,world!"
+This is game for movement player and function write "Hello,world!"
 list functions:
     Movement;
     sprint;

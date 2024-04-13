@@ -46,7 +46,7 @@ function love.update(dt)
         player.anim = player.animation.left
         ismoving = true
     end
-    if love.keyboard.isDown("d") then -- movement right
+    if love.keyboard.isDown("d") then -- movement right 
         player.x = player.x + player.speed
         player.anim = player.animation.right
         ismoving = true
@@ -60,9 +60,9 @@ function love.update(dt)
     else
         player.speed = player.startspeed
     end
-    if love.keyboard.isDown("f") then 
-        blip:play()
-    end
+    --if love.keyboard.isDown("f") then 
+    --    blip:play()
+    --end
 
 end
 function love.draw()
@@ -72,4 +72,9 @@ function love.draw()
     end
     --love.graphics.print(player.speed,200,300)
     player.anim:draw(player.spritesheet,player.x,player.y,nil,6,nil,9,9)
+end
+function love.keypressed(key)
+    if key == "f" then
+        blip:play()
+    end
 end
