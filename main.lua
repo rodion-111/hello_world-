@@ -6,6 +6,7 @@ function love.load()
     player.sprint = 10
     player.startspeed = player.speed
     music = love.audio.newSource("sounds/music.mp3","stream")
+    blip = love.audio.newSource("sounds/blip.wav","static")
     music:play()
     music:setLooping(true)
 end
@@ -26,6 +27,9 @@ function love.update(dt)
         player.speed = player.sprint
     else
         player.speed = player.startspeed
+    end
+    if love.keyboard.isDown("f") then 
+        blip:play()
     end
 
 end
