@@ -13,5 +13,6 @@ list functions:
     Hello world!;
     Music;
     blip;
+    animation;
 
-last update:add blip
+last update:added animation
