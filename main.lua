@@ -9,6 +9,9 @@ function love.load()
     blip = love.audio.newSource("sounds/blip.wav","static")
     music:play()
     music:setLooping(true)
+    player.sprite = love.graphics.newImage("sprites/parrot.png")
+    
+    background = love.graphics.newImage("sprites/background.png")
 end
 function love.update(dt)
     if love.keyboard.isDown("w") then --movement up
@@ -34,9 +37,10 @@ function love.update(dt)
 
 end
 function love.draw()
+    love.graphics.draw(background,0,0)
     if love.keyboard.isDown("space") then
         love.graphics.print("hello world!", 300,400)
     end
     --love.graphics.print(player.speed,200,300)
-    love.graphics.circle("line",player.x,player.y,30)
+    love.graphics.draw(player.sprite,player.x,player.y)
 end
